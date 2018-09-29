@@ -15,26 +15,20 @@
     var buff = Base64Binary.decodeArrayBuffer(sound);
     myAudioContext.decodeAudioData(buff, function(audioData) {
       myBuffer = audioData;
-
-
-
+    });
+    function nut() {
       mySource = myAudioContext.createBufferSource();
       mySource.buffer = myBuffer;
       mySource.connect(myAudioContext.destination);
-      // mySource.start(0);
-    });
-    function legacyNut() {
-      mySource.noteOn(0)
-    }
-    
-    function nut() {
-      mySource.start(0)
+      try {
+        mySource.noteOn(0)
+      } catch (e) {
+        mySource.start(0)
+      }
     }
   </script>
 </head>
 <body>
-  You only have the stamina for 1.
-  <button onclick="legacyNut()">Legacy Nut</button>
   <button onclick="nut()">Nut</button>
 </body>  
 </html>
