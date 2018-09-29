@@ -1,5 +1,27 @@
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <style>
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      margin: 0;
+    }
+    button {
+      background-color: #3355FF;
+      color: white;
+      font-size: 100px;
+      border-radius: 9999px;
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+    button:active {
+      background-color: rgb(46, 77, 231);
+    }
+  </style>
   <script src="./base64-binary.js"></script>
   <script>
     var myAudioContext, mySource, myBuffer;
@@ -29,6 +51,6 @@
   </script>
 </head>
 <body>
-  <button onclick="nut()">Nut</button>
+  <button onclick="nut()">NUT</button>
 </body>  
 </html>
